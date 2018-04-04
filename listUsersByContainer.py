@@ -78,8 +78,6 @@ def get_user_data_list(service):
     list_containerName = ['ContainerName']
     list_containerUserAccess = ['ContainerUserAccess']
 
-
-
     # Get a list of all Google Tag Manager accounts the service account has access to
     accounts = service.accounts().list().execute()
 
@@ -142,7 +140,7 @@ def main():
     # Define the auth scopes to request.
     scope = ['https://www.googleapis.com/auth/tagmanager.manage.users', 'https://www.googleapis.com/auth/tagmanager.edit.containers',
              'https://www.googleapis.com/auth/tagmanager.readonly']
-    key_file_location = 'P:\service_acccount_keys\my_project-c1c9c02d2c87.json'
+    key_file_location = 'SERVICE_ACCOUNT_KEY.JSON'
 
     output_csv_filename = "GoogleTagManagerUserDataList.csv"
 
